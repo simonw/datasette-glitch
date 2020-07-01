@@ -1,7 +1,7 @@
 from setuptools import setup
 import os
 
-VERSION = "0.1a"
+VERSION = "0.1"
 
 
 def get_long_description():
@@ -28,7 +28,7 @@ setup(
     version=VERSION,
     packages=["datasette_glitch"],
     entry_points={"datasette": ["glitch = datasette_glitch"]},
-    install_requires=["datasette==0.45a3"],
+    install_requires=["datasette>=0.45"],
     extras_require={"test": ["pytest", "pytest-asyncio", "httpx"]},
     tests_require=["datasette-glitch[test]"],
 )
